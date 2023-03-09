@@ -12,8 +12,8 @@ sumbitBtn.addEventListener("click", function() {
     const userKm = userKmInput.value;
     console.log (userKm)
 
-    const userAgeInput = document.getElementById("user-age");
-    const userAge = userAgeInput.value;
+    let userAgeInput = document.getElementById("user-age");
+    let userAge = userAgeInput.value;
     console.log (userAge)
     
 
@@ -24,16 +24,23 @@ const  ticketPriceFull = kmPrice * userKm
 
 let ticketPrice = ticketPriceFull;
 
-if (userAge=minorenne) {
+ let userMin = "minorenne";
+ let userSenior = "over 65";
+
+if (userAge = userMin) {
     ticketPrice = ticketPriceFull - (ticketPriceFull * 20 / 100);
 
-} else if (userAge=maggiorenne) {
+} else if (userAge = userSenior) {
     
     ticketPrice = ticketPriceFull - (ticketPriceFull * 40 / 100);
 }
 
 // risultato con dati consumatore e prezzo
-result.innerHTML = `NOME PASSEGGERO ${userName}, devi percorrere km ${userKm} il prezzo è ${ticketPrice.toFixed(2)}`;
+result.innerHTML = ` ${userName}, devi percorrere km ${userKm} il prezzo è ${ticketPrice.toFixed(2)}`;
+
+userAgeInput.value="";
+userKmInput.value="";
+userNameInput.value="";
 
 })
 

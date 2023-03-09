@@ -1,3 +1,11 @@
-body {
-    background-color: lightslategray;
+
+h1, h2 {
+    text-align: center;
+    color: white;
+}
+
+.card {
+    padding: 10px;
+    margin: 0 auto;
+    
 }
